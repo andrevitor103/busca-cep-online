@@ -1,0 +1,23 @@
+{
+    "name": "andrevitor103/digital-cep",
+    "description": "Buscar cep online VIACEP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Vitor",
+            "email": "andrevitor103@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-0":{
+            "Search": "src/"
+        },
+        "psr-4": {
+            "andrevitor103\\DigitalCep\\": "src/"
+        }
+    }
+}
