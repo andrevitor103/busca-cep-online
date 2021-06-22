@@ -1,19 +1,21 @@
 <?php
 
-    namespace andrevitor103\DigitalCep;
+namespace andrevitor103\DigitalCep;
 
-    class Search {
-        private $url = "https://viacep.com.br/ws/";
+use andrevitor103\DigitalCep\ws\ViaCep;
 
-        public function __construct(){
-              
-        }
-       
-        public function getAddressFromCep(string $cep): array{
-            $get = file_get_contents($this->url. $cep. "/json");
-            return (array) json_decode($get);
-        }
-    
+class Search
+{
+    public function __construct()
+    {
     }
+
+    public function getAddressFromCep(string $cep): array
+    {
+        $busca = new ViaCep();
+        $retorno = $busca->get($cep);
+        return $retorno;
+    }
+}
     // $busca = new Search();
     // print_r($busca->getAddressFromCep('84430000'));
